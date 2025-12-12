@@ -4,6 +4,7 @@ useHead({
     { rel: 'manifest', href: '/manifest.webmanifest' }
   ]
 })
+// Add any global logic or imports here if needed
 </script>
 
 <template>

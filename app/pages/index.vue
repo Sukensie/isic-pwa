@@ -66,7 +66,7 @@ onMounted(() => {
 				</SwiperSlide>
 			</Swiper>
 			<div class="custom-swiper-pagination flex justify-center mt-8"/>
-			<p class="text-center mt-2 mb-16 text-gray-400">Swipe through pages</p>
+			<p class="text-center mt-2 mb-16 text-gray-400">Procházení stránek</p>
 		</div>
 	</div>
 

@@ -4,6 +4,16 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
+  ssr: false,
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      routes: ['/sitemap.xml', '/robots.txt']
+    }
+  },
+  app: {
+    baseURL: '/isic-pwa/',
+  },
   css: ['~/assets/css/main.css'],
 
   modules: [

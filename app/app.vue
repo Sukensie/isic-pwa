@@ -2,7 +2,9 @@
 useHead({
   link: [
     { rel: 'manifest', href: '/isic-pwa/manifest.webmanifest' },
-    { rel: 'icon', href: '/isic-pwa/favicon.ico' }
+    { rel: 'icon', href: '/isic-pwa/favicon.ico' },
+    { rel: 'apple-touch-icon', href: '/isic-pwa/isic_logo-192x192.png', sizes: '192x192' },
+    { rel: 'apple-touch-icon', href: '/isic-pwa/isic_logo-512x512.png', sizes: '512x512' }
   ],
   meta: [
     { name: 'theme-color', content: '#3c393c' },
@@ -15,7 +17,7 @@ useHead({
 </script>
 
 <template>
-  <div class="w-full flex items-center justify-center my-8">
+  <div class="w-full flex items-center justify-center mb-8 mt-4">
     <NuxtPage/>
   </div>
 </template>

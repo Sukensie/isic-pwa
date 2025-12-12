@@ -61,3 +61,11 @@ onMounted(() => {
 	</div>
 
 </div></template>
+
+<style scoped>
+
+
+:deep(.swiper-pagination-bullet-active) {
+	background-color: #42b7b7; /* Dark color (matching top bar) for active dot */
+}
+</style>

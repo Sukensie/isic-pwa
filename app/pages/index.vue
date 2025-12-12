@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -15,9 +15,12 @@ const images = [
 ];
 
 const now = ref(new Date());
-setInterval(() => {
-	now.value = new Date();
-}, 1000);
+
+onMounted(() => {
+	setInterval(() => {
+		now.value = new Date();
+	}, 1000);
+});
 </script>
 
 <template>

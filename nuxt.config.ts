@@ -4,11 +4,19 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  ssr: false,
+  ssr: true,
+  routeRules: {
+    '/**': { prerender: true }
+  },
   nitro: {
     prerender: {
       crawlLinks: true,
-      routes: ['/sitemap.xml', '/robots.txt']
+      routes: ['/'],
+      failOnError: false
+    },
+    output: {
+      dir: '.output/public',
+      publicDir: 'public'
     }
   },
   app: {

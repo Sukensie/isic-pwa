@@ -4,19 +4,12 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  ssr: true,
-  routeRules: {
-    '/**': { prerender: true }
-  },
+  ssr: false,
   nitro: {
     prerender: {
       crawlLinks: true,
       routes: ['/'],
       failOnError: false
-    },
-    output: {
-      dir: '.output/public',
-      publicDir: 'public'
     }
   },
   app: {
@@ -35,6 +28,48 @@ export default defineNuxtConfig({
       '@vite-pwa/nuxt',
       {
         registerType: 'autoUpdate',
+        manifest: {
+          name: 'ISIC PWA',
+          short_name: 'ISIC',
+          description: 'ISIC Portal Application',
+          theme_color: '#ffffff',
+          background_color: '#ffffff',
+          display: 'standalone',
+          scope: '/isic-pwa/',
+          start_url: '/isic-pwa/',
+          icons: [
+            {
+              src: '/isic-pwa/icon-192.png',
+              sizes: '192x192',
+              type: 'image/png',
+              purpose: 'any'
+            },
+            {
+              src: '/isic-pwa/icon-512.png',
+              sizes: '512x512',
+              type: 'image/png',
+              purpose: 'any'
+            },
+            {
+              src: '/isic-pwa/icon-192-maskable.png',
+              sizes: '192x192',
+              type: 'image/png',
+              purpose: 'maskable'
+            },
+            {
+              src: '/isic-pwa/icon-512-maskable.png',
+              sizes: '512x512',
+              type: 'image/png',
+              purpose: 'maskable'
+            }
+          ]
+        },
+        workbox: {
+          globPatterns: ['**/*.{js,css,html,png,svg,ico,woff2}'],
+        },
+        client: {
+          installPrompt: true,
+        }
       }
     ]
   ],

@@ -3,6 +3,7 @@
   "short_name": "ISIC",
   "description": "Digital ISIC card PWA",
   "start_url": "/isic-pwa/",
+  "scope": "/isic-pwa/",
   "display": "standalone",
   "background_color": "#f8fafc",
   "theme_color": "#3c393c",

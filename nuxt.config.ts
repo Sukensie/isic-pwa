@@ -17,6 +17,11 @@ export default defineNuxtConfig({
   },
   css: ['~/assets/css/main.css'],
 
+  image: {
+    domains: [],
+    dir: 'assets',
+  },
+
   modules: [
     '@nuxt/eslint',
     '@nuxt/test-utils',

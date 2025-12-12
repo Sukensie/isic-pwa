@@ -9,9 +9,9 @@ import { Pagination } from 'swiper/modules';
 SwiperCore.use([Pagination]);
 
 const images = [
-		'/card_vertical.jpg',
-		'/card_front.jpg',
-		'/card_back.jpg',
+	new URL('../assets/card_vertical.jpg', import.meta.url).href,
+	new URL('../assets/card_front.jpg', import.meta.url).href,
+	new URL('../assets/card_back.jpg', import.meta.url).href,
 ];
 
 const now = ref(new Date());

@@ -16,6 +16,16 @@ const images = [
 
 const now = ref(new Date());
 
+const formatDate = (date: Date) => {
+	const day = String(date.getDate()).padStart(2, '0');
+	const month = String(date.getMonth() + 1).padStart(2, '0');
+	const year = date.getFullYear();
+	const hours = String(date.getHours()).padStart(2, '0');
+	const minutes = String(date.getMinutes()).padStart(2, '0');
+	const seconds = String(date.getSeconds()).padStart(2, '0');
+	return `${day}-${month}-${year} ${hours}:${minutes}:${seconds}`;
+};
+
 onMounted(() => {
 	setInterval(() => {
 		now.value = new Date();
@@ -35,7 +45,7 @@ onMounted(() => {
 				<span class="text-xs font-light rounded px-2">PLATNÝ</span>
 			</div>
 			<span class="text-xs">
-				{{ now.toLocaleString('cs-CZ', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' }) }}
+				{{ formatDate(now) }}
 			</span>
 		</div>
 

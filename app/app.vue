@@ -17,7 +17,7 @@ useHead({
 </script>
 
 <template>
-  <div class="w-full flex items-center justify-center mb-8 mt-4">
+  <div class="w-full flex items-center justify-center mb-8">
     <NuxtPage/>
   </div>
 </template>

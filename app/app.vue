@@ -10,7 +10,8 @@ useHead({
     { name: 'theme-color', content: '#3c393c' },
     { name: 'apple-mobile-web-app-capable', content: 'yes' },
     { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
-    { name: 'apple-mobile-web-app-title', content: 'ISIC' }
+    { name: 'apple-mobile-web-app-title', content: 'ISIC' },
+    { name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover' }
   ]
 })
 // Add any global logic or imports here if needed
@@ -21,3 +22,19 @@ useHead({
     <NuxtPage/>
   </div>
 </template>
+
+<style>
+html, body {
+  overflow: hidden !important;
+  overscroll-behavior: none !important;
+  touch-action: none;
+  height: 100%;
+}
+body {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+</style>
